@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - El Doumine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header-content .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .last-updated {
+            background-color: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .toc h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .toc li a:hover {
+            background-color: var(--light-bg);
+            padding-left: 1rem;
+        }
+
+        .section {
+            background-color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            scroll-margin-top: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+        }
+
+        .section ul, .section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background-color: #f8d7da;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: var(--white);
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎲 Privacy Policy</h1>
+            <p class="subtitle">El Doumine</p>
+            <div class="last-updated">Last Updated: November 27, 2025</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p><strong>Welcome to El Doumine!</strong></p>
+            <p>This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our El Doumine mobile application. We are committed to protecting your privacy and ensuring the security of your data.</p>
+            <p>By using El Doumine, you agree to the terms outlined in this Privacy Policy. Please read it carefully to understand our practices regarding your personal information.</p>
+        </div>
+
+        <div class="toc">
+            <h2>📋 Quick Navigation</h2>
+            <ul>
+                <li><a href="#section1">1. Information We Collect</a></li>
+                <li><a href="#section2">2. How We Use Your Information</a></li>
+                <li><a href="#section3">3. Data Storage and Security</a></li>
+                <li><a href="#section4">4. Data Sharing and Third Parties</a></li>
+                <li><a href="#section5">5. Your Rights and Choices</a></li>
+                <li><a href="#section6">6. Children's Privacy</a></li>
+                <li><a href="#section7">7. Permissions Required</a></li>
+                <li><a href="#section8">8. Cookies and Tracking</a></li>
+                <li><a href="#section9">9. International Data Transfers</a></li>
+                <li><a href="#section10">10. Changes to Privacy Policy</a></li>
+                <li><a href="#section11">11. Contact Information</a></li>
+                <li><a href="#section12">12. Legal Compliance</a></li>
+                <li><a href="#section13">13. Data Breach Notification</a></li>
+                <li><a href="#section14">14. Account Security</a></li>
+            </ul>
+        </div>
+
+        <section id="section1" class="section">
+            <h2>1. Information We Collect</h2>
+            
+            <h3>1.1 Personal Information</h3>
+            <ul>
+                <li><strong>Account Information:</strong> Email address, username, and password when you create an account</li>
+                <li><strong>Profile Information:</strong> Display name, profile photo (optional)</li>
+                <li><strong>Authentication Data:</strong> OAuth tokens from Google Sign-In and Apple Sign-In (if used)</li>
+            </ul>
+
+            <h3>1.2 Device Information</h3>
+            <ul>
+                <li><strong>Device Identifiers:</strong> Device model, manufacturer, and hardware specifications</li>
+                <li><strong>Platform Information:</strong> Operating system version (Android/iOS)</li>
+                <li><strong>Phone State:</strong> Read phone state permission (for error reporting only)</li>
+            </ul>
+
+            <h3>1.3 Game Data</h3>
+            <ul>
+                <li><strong>Match Statistics:</strong> Games won, games lost, total games played</li>
+                <li><strong>Ranking Points:</strong> Individual and team ranking scores</li>
+                <li><strong>Match History:</strong> Records of completed matches (last 20 matches)</li>
+                <li><strong>Team Information:</strong> Team memberships, team names, team photos</li>
+                <li><strong>Friend Lists:</strong> User IDs of friends you've added</li>
+                <li><strong>Match Requests:</strong> Friend match invitations and team invitations</li>
+            </ul>
+
+            <h3>1.4 Usage Data</h3>
+            <ul>
+                <li><strong>App Activity:</strong> Online/offline status, in-match status</li>
+                <li><strong>Error Logs:</strong> App crash reports and unexpected errors with optional user feedback</li>
+                <li><strong>Network Status:</strong> Internet connectivity status (for online gameplay)</li>
+            </ul>
+        </section>
+
+        <section id="section2" class="section">
+            <h2>2. How We Use Your Information</h2>
+            
+            <h3>2.1 Core Functionality</h3>
+            <ul>
+                <li>Create and manage your user account</li>
+                <li>Enable online multiplayer gameplay (1v1, 2v2, 4-player modes)</li>
+                <li>Match players for online games</li>
+                <li>Track game progress and scores</li>
+                <li>Maintain global and team leaderboards</li>
+                <li>Store match history and statistics</li>
+            </ul>
+
+            <h3>2.2 Social Features</h3>
+            <ul>
+                <li>Friend connections and friend requests</li>
+                <li>Team creation and management</li>
+                <li>Team invitations and matchmaking</li>
+                <li>Display player profiles and avatars</li>
+            </ul>
+
+            <h3>2.3 App Improvement</h3>
+            <ul>
+                <li>Diagnose and fix technical issues</li>
+                <li>Analyze app performance and stability</li>
+                <li>Improve user experience</li>
+            </ul>
+        </section>
+
+        <section id="section3" class="section">
+            <h2>3. Data Storage and Security</h2>
+            
+            <h3>3.1 Firebase Services</h3>
+            <p>We use Google Firebase services to store and manage data:</p>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> Secure user authentication</li>
+                <li><strong>Cloud Firestore:</strong> Real-time database for game data</li>
+                <li><strong>Firebase Storage:</strong> Profile photos and team photos</li>
+            </ul>
+
+            <h3>3.2 Security Measures</h3>
+            <div class="info-box">
+                <ul>
+                    <li>All data transmission is encrypted using HTTPS/SSL</li>
+                    <li>User passwords are hashed and never stored in plain text</li>
+                    <li>Firebase security rules restrict unauthorized access</li>
+                    <li>Multi-factor authentication support via Firebase Auth</li>
+                </ul>
+            </div>
+
+            <h3>3.3 Data Retention</h3>
+            <ul>
+                <li><strong>Active accounts:</strong> Data retained indefinitely while account is active</li>
+                <li><strong>Deleted accounts:</strong> All personal data permanently deleted within 30 days</li>
+                <li><strong>Match history:</strong> Stored for statistical purposes but anonymized after account deletion</li>
+            </ul>
+        </section>
+
+        <section id="section4" class="section">
+            <h2>4. Data Sharing and Third Parties</h2>
+            
+            <h3>4.1 We DO NOT:</h3>
+            <div class="highlight-box">
+                <ul>
+                    <li>❌ Sell your personal information to third parties</li>
+                    <li>❌ Share your data with advertisers</li>
+                    <li>❌ Use your data for marketing purposes without consent</li>
+                </ul>
+            </div>
+
+            <h3>4.2 Third-Party Services</h3>
+            <p>We use the following third-party services:</p>
+            <ul>
+                <li><strong>Google Firebase (Google LLC):</strong> Authentication, database, storage, analytics</li>
+                <li><strong>Google Sign-In:</strong> Optional authentication method</li>
+                <li><strong>Apple Sign-In:</strong> Optional authentication method (iOS only)</li>
+            </ul>
+
+            <h3>4.3 Public Information</h3>
+            <p>The following information is publicly visible to other users:</p>
+            <ul>
+                <li>Username/display name</li>
+                <li>Profile photo</li>
+                <li>Game statistics (wins, losses, ranking points)</li>
+                <li>Team memberships</li>
+                <li>Online/offline status (to friends only)</li>
+            </ul>
+        </section>
+
+        <section id="section5" class="section">
+            <h2>5. Your Rights and Choices</h2>
+            
+            <h3>5.1 Access and Control</h3>
+            <p>You can:</p>
+            <ul>
+                <li>✓ View your profile and statistics at any time</li>
+                <li>✓ Edit your username and profile photo</li>
+                <li>✓ Manage your friend list</li>
+                <li>✓ Leave or delete teams you've created</li>
+                <li>✓ Delete your account permanently</li>
+            </ul>
+
+            <h3>5.2 Data Deletion</h3>
+            <p>To delete your account and all associated data:</p>
+            <ol>
+                <li>Open the app</li>
+                <li>Go to Profile → Settings</li>
+                <li>Select "Delete Account"</li>
+                <li>Confirm deletion</li>
+            </ol>
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> All data will be permanently removed within 30 days.
+            </div>
+
+            <h3>5.3 Opt-Out Options</h3>
+            <ul>
+                <li>You can play offline without creating an account</li>
+                <li>You can disable friend requests in settings</li>
+                <li>You can set your status to offline to appear unavailable</li>
+            </ul>
+        </section>
+
+        <section id="section6" class="section">
+            <h2>6. Children's Privacy</h2>
+            
+            <h3>6.1 Age Restrictions</h3>
+            <div class="warning-box">
+                <ul>
+                    <li>This app is intended for users aged <strong>13 and older</strong></li>
+                    <li>We do not knowingly collect data from children under 13</li>
+                    <li>If we discover data from users under 13, we will delete it immediately</li>
+                </ul>
+            </div>
+
+            <h3>6.2 Parental Consent</h3>
+            <ul>
+                <li>Users under 18 should obtain parental consent before using the app</li>
+                <li>Parents can request deletion of their child's data by contacting us</li>
+            </ul>
+        </section>
+
+        <section id="section7" class="section">
+            <h2>7. Permissions Required</h2>
+            
+            <h3>7.1 Android Permissions</h3>
+            <ul>
+                <li><strong>INTERNET:</strong> Required for online gameplay</li>
+                <li><strong>READ_PHONE_STATE:</strong> For error reporting and device identification</li>
+                <li><strong>Camera/Gallery Access:</strong> Optional, for uploading profile/team photos</li>
+                <li><strong>Network State:</strong> To detect online/offline status</li>
+            </ul>
+
+            <h3>7.2 iOS Permissions</h3>
+            <ul>
+                <li><strong>Network Access:</strong> Required for online gameplay</li>
+                <li><strong>Photo Library:</strong> Optional, for uploading profile/team photos</li>
+                <li><strong>Sign in with Apple:</strong> Optional authentication method</li>
+            </ul>
+        </section>
+
+        <section id="section8" class="section">
+            <h2>8. Cookies and Tracking</h2>
+            
+            <h3>8.1 Local Storage</h3>
+            <p>We use local storage (SharedPreferences) to:</p>
+            <ul>
+                <li>Remember your login status</li>
+                <li>Cache user preferences</li>
+                <li>Store device-specific settings</li>
+            </ul>
+
+            <h3>8.2 Analytics</h3>
+            <p>We use Firebase Analytics to:</p>
+            <ul>
+                <li>Track app usage patterns (anonymized)</li>
+                <li>Monitor app performance</li>
+                <li>Identify and fix bugs</li>
+            </ul>
+            <div class="info-box">
+                <strong>💡 Note:</strong> You can disable analytics in app settings.
+            </div>
+        </section>
+
+        <section id="section9" class="section">
+            <h2>9. International Data Transfers</h2>
+            <ul>
+                <li>Your data may be stored on Firebase servers located in various regions</li>
+                <li>Firebase complies with GDPR, CCPA, and other international privacy laws</li>
+                <li>Data transfers are protected by encryption and security protocols</li>
+            </ul>
+        </section>
+
+        <section id="section10" class="section">
+            <h2>10. Changes to Privacy Policy</h2>
+            <ul>
+                <li>We may update this policy from time to time</li>
+                <li>Material changes will be notified via in-app notification</li>
+                <li>Continued use of the app constitutes acceptance of changes</li>
+                <li>Last updated date is shown at the top of this policy</li>
+            </ul>
+        </section>
+
+        <section id="section11" class="section contact-section">
+            <h2>11. Contact Information</h2>
+            <p>For privacy-related questions or requests, please contact us:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 Email</strong>
+                    <a href="mailto:team@avalon-lbs.com" style="color: white;">team@avalon-lbs.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>📱 App Support</strong>
+                    Profile → Settings → Help
+                </div>
+                <div class="contact-item">
+                    <strong>🏢 Developer</strong>
+                    Avalon Labs
+                </div>
+            </div>
+        </section>
+
+        <section id="section12" class="section">
+            <h2>12. Legal Compliance</h2>
+            
+            <h3>12.1 GDPR Compliance (EU Users)</h3>
+            <ul>
+                <li>Right to access your data</li>
+                <li>Right to rectification of inaccurate data</li>
+                <li>Right to erasure ("right to be forgotten")</li>
+                <li>Right to data portability</li>
+                <li>Right to object to data processing</li>
+            </ul>
+
+            <h3>12.2 CCPA Compliance (California Users)</h3>
+            <ul>
+                <li>Right to know what data is collected</li>
+                <li>Right to delete personal information</li>
+                <li>Right to opt-out of data sales (we don't sell data)</li>
+                <li>Right to non-discrimination for exercising privacy rights</li>
+            </ul>
+
+            <h3>12.3 COPPA Compliance</h3>
+            <ul>
+                <li>No data collection from children under 13</li>
+                <li>Parental consent mechanisms in place</li>
+                <li>Immediate deletion of underage user data if discovered</li>
+            </ul>
+        </section>
+
+        <section id="section13" class="section">
+            <h2>13. Data Breach Notification</h2>
+            <p>In the event of a data breach:</p>
+            <ul>
+                <li>We will notify affected users within 72 hours</li>
+                <li>We will provide details of the breach and steps taken</li>
+                <li>We will offer guidance on protecting your account</li>
+            </ul>
+        </section>
+
+        <section id="section14" class="section">
+            <h2>14. Account Security</h2>
+            
+            <h3>14.1 User Responsibilities</h3>
+            <ul>
+                <li>🔒 Keep your password secure</li>
+                <li>🔑 Use strong, unique passwords</li>
+                <li>🛡️ Enable two-factor authentication (if available)</li>
+                <li>🚪 Log out from shared devices</li>
+            </ul>
+
+            <h3>14.2 Our Responsibilities</h3>
+            <ul>
+                <li>Encrypt data in transit and at rest</li>
+                <li>Monitor for suspicious activity</li>
+                <li>Promptly address security vulnerabilities</li>
+            </ul>
+        </section>
+
+        <div class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); text-align: center;">
+            <h2 style="color: var(--primary-color); border: none;">🎲 Thank You for Playing El Doumine!</h2>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">We are committed to protecting your privacy and providing a safe, enjoyable gaming experience.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Avalon Labs. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">El Doumine - Privacy Policy</p>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
